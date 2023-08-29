@@ -1,0 +1,73 @@
+#main {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url('../src/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+.text {
+    font-family: "Josefin Sans";
+}
+
+#navbar {
+    z-index: 10;
+    position: fixed;
+    background-color: rgb(29, 29, 29);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 3rem 3rem;
+}
+
+#logo {
+    user-select: none;
+    height: 90%;
+    transform: translateY(5%);
+    padding-left: 1vw;
+    filter: invert();
+}
+
+.section {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#frontpage {
+    background-color: black;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+#frontpage-video {
+    user-select: none;
+    position: static;
+    width: 100%;
+    z-index: -1;
+    margin-top: -10vh;
+    filter: blur(0.5vw) saturate(0.5);
+
+}
+
+#frontpage-text-main {
+    user-select: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 7vw;
+}
