@@ -16,6 +16,7 @@
 :root {
     --light-colour: #e0e0e0;
     --dark-colour: #202020;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,6 +48,8 @@ body {
     width: auto;
     overflow-y: hidden;
     background-color: var(--dark-colour);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 /*
@@ -250,6 +253,156 @@ body {
 }
 
 /*
+====================================================
+ .d8888b. 8888888888P  .d88888b.  888      .d8888b.  
+d88P  Y88b      d88P  d88P" "Y88b 888     d88P  Y88b 
+Y88b.          d88P   888     888 888     888    888 
+ "Y888b.      d88P    888     888 888     888        
+    "Y88b.   d88P     888     888 888     888  88888 
+      "888  d88P      888     888 888     888    888 
+Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P 
+ "Y8888P" d8888888888  "Y88888P"  88888888 "Y8888P88
+====================================================
+ */
+
+.szolg-container {
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+}
+
+.szolg-item {
+    cursor: pointer;
+    width: 15%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+}
+
+.szolg-item:hover {
+    width: 17%;
+    height: 60%;
+}
+
+.szolg-item-top {
+    border-top-right-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 50%;
+    transform: skew(20deg);
+    background-color: var(--light-colour);
+    border: 1px solid black;
+    transition: background 0.25s;
+    display: grid;
+}
+
+.szolg-item-top:hover, .szolg-item-bottom:hover {
+    background-color: var(--dark-colour);
+    font-size: 1.7rem;
+}
+
+
+#szolg-item1 .szolg-item-top {
+    background-position: 90% 30%;
+    background-size: 40rem;
+}
+
+#szolg-item1 .szolg-item-bottom {
+    background-position: 40% 0%;
+    background-size: 50rem;
+}
+
+#szolg-item1 .szolg-item-top:hover {
+    background-image: url('../src/img/retro_disco.JPG');
+}
+#szolg-item1 .szolg-item-bottom:hover {
+    background-image: url('../src/img/retro_bal.JPG');
+}
+#szolg-item2 .szolg-item-top:hover {
+    background-image: url('../src/img/retro_disco.JPG');
+}
+#szolg-item2 .szolg-item-bottom:hover {
+    background-image: url('../src/img/retro_disco.JPG');
+}
+#szolg-item3 .szolg-item-top:hover {
+    background-image: url('../src/img/retro_disco.JPG');
+}
+#szolg-item3 .szolg-item-bottom:hover {
+    background-image: url('../src/img/retro_disco.JPG');
+}
+
+.szolg-item-top:hover a, .szolg-item-bottom:hover a {
+    color: var(--light-colour);
+}
+
+.szolg-item a {
+    font-size: 1.2rem;
+    color: black;
+    transition: all 0.25s;
+    width: 90%;
+    text-wrap: wrap;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.szolg-item-top a {
+    transform: skew(-20deg);
+}
+
+.szolg-item-bottom a {
+    transform: skew(20deg);
+}
+
+.szolg-item-bottom {
+    border-bottom-right-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 50%;
+    transform: skew(-20deg);
+    background: var(--light-colour);
+    border: 1px solid rgb(48, 50, 78);
+    transition: border 0.25s;
+    display: grid;
+}
+
+.szolg-bg {
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--dark-colour);
+}
+
+.szolg-bg p {
+    user-select: none;
+    line-height: 1rem;
+    margin-left: -100rem;
+    color: #292929;
+    transform: rotateZ(-30deg) translateX(0rem);
+    font-size: 3rem;
+    animation-duration: 20s;
+    animation-name: szolg-bg-anim;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.szolg-bg p.left {
+    animation-direction: reverse;
+}
+
+
+/*
 =================================================================================================================
 
        d8888 888b    888 8888888 888b     d888        d8888 88888888888 8888888 .d88888b.  888b    888  .d8888b.  
@@ -264,7 +417,10 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
 =================================================================================================================                                                                                                                                                                                                           
 */
 
-
+@keyframes szolg-bg-anim {
+    from {transform: rotateZ(-30deg) translateX(-28.1rem);}
+    to {transform: rotateZ(-30deg) translateX(-10rem);};
+}
 
 @keyframes icon-anim-hover {
     from {filter: grayscale(1) brightness(2.1);}
@@ -350,7 +506,7 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
     }
 
     .navbar-dropdown-container {
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -358,7 +514,7 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
         row-gap: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 10;
+        z-index: 8;
         background-color: var(--dark-colour);
         margin-top: -13rem;
         padding: 2rem 3rem;
