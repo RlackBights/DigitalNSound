@@ -46,7 +46,7 @@ body {
     padding: 0;
     height: 100vh;
     width: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: var(--dark-colour);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -390,7 +390,7 @@ Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P
     margin-left: -100rem;
     color: #292929;
     transform: rotateZ(-30deg) translateX(0rem);
-    font-size: 3rem;
+    font-size: 7vmin;
     animation-duration: 20s;
     animation-name: szolg-bg-anim;
     animation-iteration-count: infinite;
@@ -401,6 +401,160 @@ Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P
     animation-direction: reverse;
 }
 
+/*
+==========================================================
+8888888b.   .d88888b.  888             d8888 888b     d888 
+888   Y88b d88P" "Y88b 888            d88888 8888b   d8888 
+888    888 888     888 888           d88P888 88888b.d88888 
+888   d88P 888     888 888          d88P 888 888Y88888P888 
+8888888P"  888     888 888         d88P  888 888 Y888P 888 
+888 T88b   888     888 888        d88P   888 888  Y8P  888 
+888  T88b  Y88b. .d88P 888       d8888888888 888   "   888 
+888   T88b  "Y88888P"  88888888 d88P     888 888       888
+==========================================================
+*/
+
+#rolam {
+    color: var(--light-colour);
+    padding: 0 0 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#rolam h1 {
+    padding: 0;
+    margin: 0 0 20vmin 0;
+    font-size: 12vmin;
+}
+
+#rolam ul {
+    list-style-image: url('../src/img/microphone_icon.svg');
+    list-style-position: inside;
+}
+
+#rolam li {
+    padding: 0;
+    line-height: 5vmin;
+    font-size: 3.5vmin;
+}
+
+#rolam img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+}
+
+#img-container {
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 80% 100%, 0 50%);
+    display: flex;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background: var(--light-colour);
+}
+
+/*
+=======================================================
+888    d8P  8888888888 8888888b.  8888888888 888    d8P  
+888   d8P   888        888   Y88b 888        888   d8P   
+888  d8P    888        888    888 888        888  d8P    
+888d88K     8888888    888   d88P 8888888    888d88K     
+8888888b    888        8888888P"  888        8888888b    
+888  Y88b   888        888        888        888  Y88b   
+888   Y88b  888        888        888        888   Y88b  
+888    Y88b 8888888888 888        8888888888 888    Y88b
+========================================================
+*/
+
+#disc-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    clip-path: circle(40vmin);
+    padding: 0;
+    margin: 0;
+    bottom: -40%;
+    transform: scale(1.1);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(255,0,0,1) 1.3%, rgba(255,0,0,1) 10%, rgba(0,0,0,1) 10.3%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 35%);
+    animation-name: rotate-disc;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    transition: transform 0.25s ease-in-out;
+}
+
+#disc-container:hover {
+    animation-play-state: paused;
+    transform: scale(1.3);
+}
+
+#disc-container img {
+    display: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 23%;
+    clip-path: polygon(0 20%, 50% 0, 100% 20%, 70% 100%, 50% 95%, 30% 100%);
+}
+
+#kepek-img1 {
+    display: block !important;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16%;
+}
+
+#kepek-img2 {
+    display: block !important;
+    left: 52.5%;
+    transform: rotateZ(60deg);
+    top: 4.5%;
+}
+
+#kepek-img3 {
+    display: block !important;
+    left: 52.25%;
+    transform: rotateZ(120deg);
+    top: 4%;
+}
+
+#kepek-img4 {
+    display: block !important;
+    left: 50%;
+    transform: rotateZ(180deg) translateX(50%);
+    top: -8%;
+}
+
+#kepek-img5 {
+    display: block !important;
+    left: 31.5%;
+    transform: rotateZ(240deg);
+    top: -42%;
+}
+
+#kepek-img6 {
+    display: block !important;
+    left: 31.5%;
+    transform: rotateZ(300deg);
+    top: -87.5%;
+}
+
+#disc-container p {
+    color: var(--light-colour);
+    text-align: center;
+    font-size: 20vmin;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20%;
+}
 
 /*
 =================================================================================================================
@@ -416,6 +570,11 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
                        
 =================================================================================================================                                                                                                                                                                                                           
 */
+
+@keyframes rotate-disc {
+    0% {rotate: 0deg;}
+    100% {rotate: -360deg;}
+} 
 
 @keyframes szolg-bg-anim {
     from {transform: rotateZ(-30deg) translateX(-28.1rem);}
