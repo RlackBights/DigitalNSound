@@ -648,7 +648,7 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
 
     #navbar {
         width: 100%;
-        background-color: var(--dark-colour);
+        background-color: var(--dark-secondary);
         column-gap: 3rem;
         justify-content: space-around;
     }
@@ -694,7 +694,7 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
         left: 50%;
         transform: translateX(-50%);
         z-index: 8;
-        background-color: var(--dark-colour);
+        background-color: var(--dark-secondary);
         margin-top: -13rem;
         padding: 2rem 3rem;
         border-bottom-left-radius: 2rem;
