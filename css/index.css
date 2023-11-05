@@ -438,13 +438,15 @@ Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P
 
 #rolam h1 {
     padding: 0;
-    margin: 0 0 20vmin 0;
+    margin: 6vmin 0 14vmin 0;
     font-size: 12vmin;
 }
 
 #rolam ul {
     list-style-image: url('../src/img/microphone_icon.svg');
     list-style-position: inside;
+    background-color: var(--dark-colour);
+    border-radius: 3%;
 }
 
 #rolam li {
@@ -705,4 +707,19 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
         font-size: 2rem;
     }
 
+    #rolam h1 {
+        padding: 0;
+        margin: 0 0 20vmin 0;
+        font-size: 12vmin;
+    }
+
+    #rolam ul {
+        padding: 1vmin 2vmin 1vmin 2vmin;
+    }
+
+    #rolam li {
+        padding: 0;
+        line-height: 5vmin;
+        font-size: 5vmin;
+    }
 }
