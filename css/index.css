@@ -707,9 +707,13 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
         font-size: 2rem;
     }
 
+    #rolam{
+        align-items: flex-start;
+    }
+
     #rolam h1 {
         padding: 0;
-        margin: 0 0 20vmin 0;
+        margin: 5vmin 0 15vmin 0;
         font-size: 12vmin;
     }
 
@@ -722,4 +726,15 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
         line-height: 5vmin;
         font-size: 5vmin;
     }
+
+    #rolam video {
+        position: relative;
+        align-self: flex-start;
+        right:5vmin;
+        margin-top: 5vmin;
+        margin-left: 10vmin;
+        bottom: 0;
+        width: 50vmin;
+    }
 }
+
