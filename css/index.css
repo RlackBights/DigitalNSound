@@ -16,6 +16,7 @@
 :root {
     --light-colour: #e0e0e0;
     --dark-colour: #202020;
+    --dark-secondary: #171717;
     scroll-behavior: smooth;
 }
 
@@ -78,7 +79,7 @@ body {
     align-items: center;
     align-content: center;
     column-gap: 0.5rem;
-    background-color: var(--dark-colour);
+    background-color: var(--dark-secondary);
     left: 50%;
     width: 40rem;
     height: 3rem;
