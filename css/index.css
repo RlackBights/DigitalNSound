@@ -269,6 +269,7 @@ Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P
 #szolgaltatasok h1 {
     width: 100%;
     text-align: center;
+    position: relative;
     z-index: 100;
 }
 
