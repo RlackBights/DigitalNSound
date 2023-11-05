@@ -403,7 +403,7 @@ Y88b  d88P d88P       Y88b. .d88P 888     Y88b  d88P
     color: #292929;
     transform: rotateZ(-30deg) translateX(0rem);
     font-size: 7vmin;
-    animation-duration: 20s;
+    animation-duration: 100s;
     animation-name: szolg-bg-anim;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -597,8 +597,8 @@ d88P     888 888    Y888 8888888 888       888 d88P     888     888     8888888 
 } 
 
 @keyframes szolg-bg-anim {
-    from {transform: rotateZ(-30deg) translateX(-28.1rem);}
-    to {transform: rotateZ(-30deg) translateX(-10rem);};
+    from {transform: rotateZ(-30deg) translateX(-50%);}
+    to {transform: rotateZ(-30deg) translateX(50%);};
 }
 
 @keyframes icon-anim-hover {
