@@ -10,9 +10,9 @@ function mobileNavMenu() {
     console.log(isOpen);
 
     if (isOpen) {
-        navbarMenu.style.marginTop = "3.5rem"
+        navbarMenu.style.marginTop = "5vh"
     } else {
-        navbarMenu.style.marginTop = "-13rem"
+        navbarMenu.style.marginTop = "-45vh"
     }
 
     navbarMenu.style.transition = "margin-top 1s"
